@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Domain - Nebulite Hosting</title>
+    <meta name="description" content="Default Domain Page - Nebulite Hosting">
+    <meta name="copyright" content="Copyright 2023-2025. Nebulite Hosting. All rights reserved.">
+    <!-- Import Google font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .company-header {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            z-index: 100;
+        }
+
+        .company-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .company-link:hover {
+            opacity: 0.9;
+        }
+
+        .company-logo {
+            font-size: 32px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .company-name {
+            color: white;
+            font-size: 24px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            margin-top: 8em;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bg {
+            animation: slide 3s ease-in-out infinite alternate;
+            background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+            bottom: 0;
+            left: -50%;
+            opacity: .5;
+            position: fixed;
+            right: -50%;
+            top: 0;
+            z-index: -1;
+        }
+
+        .bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+
+        .bg3 {
+            animation-duration: 5s;
+        }
+
+        .wrapper {
+            width: 600px;
+            background: #fff;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .domain-title {
+            color: #2d3748;
+            margin: 0 0 20px 0;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .domain-name {
+            color: #09f;
+            font-weight: 600;
+        }
+
+        .domain-description {
+            color: #718096;
+            margin: 0 0 20px 0;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(-25%);
+            }
+            100% {
+                transform: translateX(25%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                width: 90%;
+                padding: 30px;
+            }
+            
+            .domain-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <div class="company-header">
+        <a href="#" class="company-link">
+            <div class="company-logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="40" height="40" rx="8" fill="white"/>
+                    <path d="M8 8H32C34.2091 8 36 9.79086 36 12V28C36 30.2091 34.2091 32 32 32H8C5.79086 32 4 30.2091 4 28V12C4 9.79086 5.79086 8 8 8Z" fill="#09f"/>
+                    <path d="M12 16L16 12H20L24 16L20 20H16L12 16Z" fill="white"/>
+                </svg>
+            </div>
+            <h1 class="company-name">NBH</h1>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="wrapper">
+            <h2 class="domain-title">Default Webseite für <span class="domain-name" id="domain-name"></span></h2>
+            <p class="domain-description">
+                Dies ist eine Standard-Webseite, die automatisch für diese Domain generiert wurde von Nebulite Hosting.
+            </p>
+            <p class="domain-description">
+                Wenn Sie der Besitzer dieser Domain sind, können Sie diese Seite durch Ihre eigenen Inhalte ersetzen.
+                Laden Sie Ihre Dateien einfach über FTP oder das Webhosting-Kontrollpanel hoch.
+            </p>
+            <div class="footer">
+                © 2025 Nebulite Hosting. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Display the current domain name
+        document.getElementById('domain-name').textContent = location.hostname;
+    </script>
+</body>
+</html>
