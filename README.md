@@ -1,6 +1,6 @@
-# Nebulite Express Server
+# Express Server
 
-Ein einfacher Express.js Server für Nebulite Hosting, der mit dem Pterodactyl Panel verwendet werden kann.
+Ein einfacher Express.js Server für deinen Webspace, der mit dem Pterodactyl Panel verwendet werden kann.
 
 ## Funktionen
 
